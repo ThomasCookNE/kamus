@@ -21,11 +21,11 @@ To encrypt the data, start by deciding to which namespace and which service acco
 The service account does not have to exist or used by the pod consuming the secret.
 It just used for expressing who can consume this encrypted secret.
 Use the [CLI](https://github.com/Soluto/kamus/blob/master/cli/README.md) to encrypt the data:
-```
-kamus-cli encrypt 
-  --secret super-secret \\ 
-  --service-account kamus-example-sa \\
-  --namespace default \\
+``` sh
+kamus-cli encrypt \
+  --secret super-secret \
+  --service-account kamus-example-sa \
+  --namespace default \
   --kamus-url <Kamus URL>
 ```
 Now that you have the data encrypted, create a KamusSecret object, using the following manifest:
